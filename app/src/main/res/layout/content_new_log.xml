@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="rbrewer.rbrewer_fueltrack.NewLog"
+    tools:showIn="@layout/new_log_activity">
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/save"
+        android:layout_toStartOf="@+id/save"
+        android:text="Cancel"
+        android:onClick="cancelNewLog"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="Save"
+        android:onClick="saveLog"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Date: "
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/setDate"/>
+
+    <TextView
+        android:id="@+id/station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Station: "
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/setStation"/>
+
+    <TextView
+        android:id="@+id/odometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Odometer: "
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/setOdometer"/>
+
+    <TextView
+        android:id="@+id/fuelGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Grade: "
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/setFuelGrade"/>
+
+    <TextView
+        android:id="@+id/fuelAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount: "
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/setFuelAmount"/>
+
+    <TextView
+        android:id="@+id/fuelUnitCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Price: "
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/setFuelUnitCost"/>
+
+    <EditText
+        android:id="@+id/setDate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/setOdometer"
+        android:layout_alignStart="@+id/setOdometer"
+        android:hint="Enter Date (YYYY-MM-DD)"/>
+
+    <EditText
+        android:id="@+id/setStation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/setDate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/setOdometer"
+        android:layout_alignStart="@+id/setOdometer"
+        android:hint="Enter Gas Station" />
+
+    <EditText
+        android:id="@+id/setOdometer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/setStation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/odometer"
+        android:layout_toEndOf="@+id/odometer"
+        android:hint="Enter Current Odometer" />
+
+    <EditText
+        android:id="@+id/setFuelGrade"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/setOdometer"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/setOdometer"
+        android:layout_alignStart="@+id/setOdometer"
+        android:hint="Enter Fuel Grade" />
+
+    <EditText
+        android:id="@+id/setFuelAmount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/setFuelGrade"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/setOdometer"
+        android:layout_alignStart="@+id/setOdometer"
+        android:hint="Enter Fuel Amount (Litres)" />
+
+    <EditText
+        android:id="@+id/setFuelUnitCost"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/setFuelAmount"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/setOdometer"
+        android:layout_alignStart="@+id/setOdometer"
+        android:hint="Enter Fuel Price (cents/L)" />
+
+</RelativeLayout>
